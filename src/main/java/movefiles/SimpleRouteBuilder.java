@@ -4,8 +4,8 @@ import org.apache.camel.builder.RouteBuilder;
 
 public class SimpleRouteBuilder extends RouteBuilder {
 
-  public static final String SOURCE_FOLDER = "D:\\Temp\\source";
-  public static final String TARGET_FOLDER = "D:\\Temp\\target";
+  public String sourceFolder = "D:\\Temp\\source";
+  public String targetFolder = "D:\\Temp\\target";
 
   /**
    * Essentially, a Route is an instruction to Camel on how messages should move from one point to another.
@@ -13,6 +13,14 @@ public class SimpleRouteBuilder extends RouteBuilder {
    */
   @Override
   public void configure() throws Exception {
-    from("file:" + SOURCE_FOLDER).to("file:" + TARGET_FOLDER);
+    from("file:" + sourceFolder).to("file:" + targetFolder);
+  }
+
+  public void setSourceFolder(final String sourceFolder) {
+    this.sourceFolder = sourceFolder;
+  }
+
+  public void setTargetFolder(final String targetFolder) {
+    this.targetFolder = targetFolder;
   }
 }
