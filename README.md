@@ -1,3 +1,4 @@
+![CI pipeline](https://github.com/joxw1/apache-camel-example/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 # Sample Project for Apache Camel
 This project is an example of [Apache Camel](https://camel.apache.org/) routing. In the current example, files from one folder are automatically moved to another folder. 
 The project is based on the DZone article [here](https://dzone.com/articles/a-simple-introduction-to-apache-camel).
